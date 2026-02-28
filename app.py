@@ -1,8 +1,4 @@
-try:
-    import langchain_openai
-except ImportError:
-    !pip install -U langchain-openai
-    import langchain_openai
+
 
 import os
 import requests
@@ -269,4 +265,5 @@ if user_input := st.chat_input("e.g., How is our pipeline for the energy sector?
 
         # 3. Print the final beautiful answer
         st.markdown(final_response)
+
         st.session_state.messages.append({"role": "assistant", "content": final_response})
