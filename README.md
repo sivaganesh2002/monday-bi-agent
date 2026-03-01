@@ -44,9 +44,9 @@ Returns beautifully formatted Markdown summaries:
 - Clean sections
 - Data Caveats
 
----
 
-# 🏗️ System Architecture
+
+#  System Architecture
 
 ```
 User Query
@@ -62,7 +62,7 @@ response_formatter
 Executive Summary
 ```
 
----
+
 
 ## 1️⃣ query_breakdown
 
@@ -73,7 +73,7 @@ Executive Summary
 - Uses structured LLM output via Pydantic
 - Ensures deterministic task planning
 
----
+
 
 ## 2️⃣ agent
 
@@ -90,7 +90,7 @@ Responsibilities:
 ⚠️ The agent does NOT format output.  
 It focuses purely on data accuracy.
 
----
+
 
 ## 3️⃣ tools (Monday.com Integrations)
 
@@ -103,7 +103,7 @@ All tools use Monday.com’s GraphQL API.
 | `fetch_all_work_orders_data()` | Pulls entire Work Orders board |
 | `search_specific_work_order(item_name)` | Finds a specific work order |
 
----
+
 
 ## 4️⃣ response_formatter
 
@@ -115,7 +115,7 @@ All tools use Monday.com’s GraphQL API.
 - Adds Data Caveats section
 - Does NOT modify numbers
 
----
+
 
 # 📈 Example Output
 
@@ -126,21 +126,21 @@ All tools use Monday.com’s GraphQL API.
 **Deals Closing This Month:** 6  
 **Delayed Work Orders:** 3  
 
----
+
 
 ### 🚨 Risks
 
 - 42% of revenue tied to 2 deals
 - 3 work orders overdue >14 days
 
----
+
 
 ### 📌 Data Caveats
 
 - 1 deal missing probability field  
 - 2 work orders missing due date  
 
----
+
 
 # 🛠 Tech Stack
 
