@@ -8,10 +8,10 @@
 
 This system allows founders and executives to ask questions like:
 
-- 💰 “What’s our current weighted pipeline?”
-- 📈 “How much revenue is closing this month?”
-- 🛠 “Which work orders are delayed?”
-- 📊 “What are our operational bottlenecks?”
+-  “What’s our current weighted pipeline?”
+-  “How much revenue is closing this month?”
+-  “Which work orders are delayed?”
+-  “What are our operational bottlenecks?”
 
 The agent autonomously:
 
@@ -25,19 +25,19 @@ The agent autonomously:
 
 #  Key Capabilities
 
-### 🔎 Intelligent Query Decomposition
+### Intelligent Query Decomposition
 Breaks complex business questions into structured sub-queries using a Pydantic schema.
 
-### 🧮 Accurate BI Computation
+###  Accurate BI Computation
 Pulls live data from Monday.com and computes real metrics.
 
-### 📊 Multi-Board Intelligence
+###  Multi-Board Intelligence
 Understands relationships between:
 - Sales Pipeline (Deals Board)
 - Work Orders Tracker
 - Revenue & Operational Metrics
 
-### 🧾 Executive-Ready Output
+###  Executive-Ready Output
 Returns beautifully formatted Markdown summaries:
 - Bold KPIs
 - Bullet points
@@ -64,7 +64,7 @@ Executive Summary
 
 
 
-## 1️⃣ query_breakdown
+##  query_breakdown
 
 **Role:** Strategic Planner
 
@@ -75,7 +75,7 @@ Executive Summary
 
 
 
-## 2️⃣ agent
+##  agent
 
 **Role:** Senior BI Data Analyst
 
@@ -87,12 +87,12 @@ Responsibilities:
 - Ask clarifying questions if needed
 - Return raw analytical facts only
 
-⚠️ The agent does NOT format output.  
+ The agent does NOT format output.  
 It focuses purely on data accuracy.
 
 
 
-## 3️⃣ tools (Monday.com Integrations)
+##  tools (Monday.com Integrations)
 
 All tools use Monday.com’s GraphQL API.
 
@@ -105,7 +105,7 @@ All tools use Monday.com’s GraphQL API.
 
 
 
-## 4️⃣ response_formatter
+##  response_formatter
 
 **Role:** Executive Assistant
 
@@ -117,7 +117,7 @@ All tools use Monday.com’s GraphQL API.
 
 
 
-# 📈 Example Output
+# Example Output
 
 ### Executive Summary
 
@@ -128,21 +128,21 @@ All tools use Monday.com’s GraphQL API.
 
 
 
-### 🚨 Risks
+### Risks
 
 - 42% of revenue tied to 2 deals
 - 3 work orders overdue >14 days
 
 
 
-### 📌 Data Caveats
+### Data Caveats
 
 - 1 deal missing probability field  
 - 2 work orders missing due date  
 
 
 
-# 🛠 Tech Stack
+#  Tech Stack
 
 - LangGraph – Stateful agent orchestration
 - LangChain – Tool abstraction
