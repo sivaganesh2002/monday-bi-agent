@@ -1,79 +1,157 @@
-<img width="726" height="916" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/663254f4-d86f-440e-9fcf-3e454c6cae4c" />
-Monday.com Founder BI Agent
+# 🚀 Monday.com Founder BI Agent
+<img width="726" height="916" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/baebdf46-dff0-495b-b357-de0a4188824f" />
 
-An AI-powered Founder-Level Business Intelligence Agent built using LangGraph, LangChain, OpenAI, and Monday.com API.
 
-This system allows founders and executives to ask natural language questions about:
+> An AI-Powered Founder-Level Business Intelligence Agent  
+Built with **LangGraph + LangChain + OpenAI + Monday.com GraphQL API**
 
-💰 Sales Pipeline (Deals Board)
+Transform raw operational data into executive-ready insights using natural language.
 
-🛠 Work Orders Tracker
+---
 
-📈 Revenue & Operational Metrics
+## 🧠 Overview
+
+This system allows founders and executives to ask questions like:
+
+- 💰 “What’s our current weighted pipeline?”
+- 📈 “How much revenue is closing this month?”
+- 🛠 “Which work orders are delayed?”
+- 📊 “What are our operational bottlenecks?”
 
 The agent autonomously:
 
-Breaks down complex queries
+- Breaks down complex queries
+- Selects the correct data source
+- Calls live Monday.com APIs
+- Computes raw facts
+- Formats a clean executive summary
 
-Selects the correct data source
+---
 
-Calls live Monday.com APIs
+# ✨ Key Capabilities
 
-Computes raw facts
+### 🔎 Intelligent Query Decomposition
+Breaks complex business questions into structured sub-queries using a Pydantic schema.
 
-Formats a clean executive summary
+### 🧮 Accurate BI Computation
+Pulls live data from Monday.com and computes real metrics.
 
-System Architecture
-1️⃣ query_breakdown
+### 📊 Multi-Board Intelligence
+Understands relationships between:
+- Sales Pipeline (Deals Board)
+- Work Orders Tracker
+- Revenue & Operational Metrics
 
-Takes the user query
+### 🧾 Executive-Ready Output
+Returns beautifully formatted Markdown summaries:
+- Bold KPIs
+- Bullet points
+- Clean sections
+- Data Caveats
 
-Breaks it into smaller logical sub-queries
+---
 
-Uses structured LLM output via Pydantic schema
+# 🏗️ System Architecture
 
-2️⃣ agent
+```
+User Query
+    ↓
+query_breakdown
+    ↓
+agent (BI Analyst)
+    ↓
+Monday.com Tools
+    ↓
+response_formatter
+    ↓
+Executive Summary
+```
 
-Acts as the BI Data Analyst
+---
 
-Decides which Monday.com tool to call
+## 1️⃣ query_breakdown
 
-Focuses purely on data accuracy
+**Role:** Strategic Planner
 
-Can:
+- Takes user query
+- Breaks into logical sub-queries
+- Uses structured LLM output via Pydantic
+- Ensures deterministic task planning
 
-Call tools
+---
 
-Ask clarifying questions
+## 2️⃣ agent
 
-Return raw analytical facts
+**Role:** Senior BI Data Analyst
 
-3️⃣ tools
+Responsibilities:
 
-Connected Monday.com tools:
+- Select correct Monday.com tool
+- Call tools
+- Compute accurate metrics
+- Ask clarifying questions if needed
+- Return raw analytical facts only
 
-Tool	Description
-fetch_all_deals_data()	Pulls entire Sales Pipeline board
-search_specific_deal(item_name)	Finds a specific deal
-fetch_all_work_orders_data()	Pulls entire Work Orders board
-search_specific_work_order(item_name)	Finds a specific work order
+⚠️ The agent does NOT format output.  
+It focuses purely on data accuracy.
 
-All tools use Monday.com's GraphQL API.
+---
 
-4️⃣ response_formatter
+## 3️⃣ tools (Monday.com Integrations)
 
-Acts as an Executive Assistant
+All tools use Monday.com’s GraphQL API.
 
-Converts raw analytical output into:
+| Tool | Description |
+|------|-------------|
+| `fetch_all_deals_data()` | Pulls entire Sales Pipeline board |
+| `search_specific_deal(item_name)` | Finds a specific deal |
+| `fetch_all_work_orders_data()` | Pulls entire Work Orders board |
+| `search_specific_work_order(item_name)` | Finds a specific work order |
 
-Clean Markdown
+---
 
-Bullet points
+## 4️⃣ response_formatter
 
-Bold metrics
+**Role:** Executive Assistant
 
-Executive summaries
+- Converts raw facts into clean Markdown
+- Highlights key metrics
+- Adds Risks section
+- Adds Data Caveats section
+- Does NOT modify numbers
 
-Highlights missing data in a Data Caveats section
+---
 
-Does NOT modify numbers
+# 📈 Example Output
+
+### Executive Summary
+
+**Total Open Pipeline:** $1.42M  
+**Weighted Pipeline:** $930K  
+**Deals Closing This Month:** 6  
+**Delayed Work Orders:** 3  
+
+---
+
+### 🚨 Risks
+
+- 42% of revenue tied to 2 deals
+- 3 work orders overdue >14 days
+
+---
+
+### 📌 Data Caveats
+
+- 1 deal missing probability field  
+- 2 work orders missing due date  
+
+---
+
+# 🛠 Tech Stack
+
+- LangGraph – Stateful agent orchestration
+- LangChain – Tool abstraction
+- OpenAI – LLM reasoning
+- Monday.com GraphQL API – Live business data
+- Pydantic – Structured output validation
+
