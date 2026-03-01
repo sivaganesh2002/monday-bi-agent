@@ -21,9 +21,9 @@ The agent autonomously:
 - Computes raw facts
 - Formats a clean executive summary
 
----
 
-# ✨ Key Capabilities
+
+#  Key Capabilities
 
 ### 🔎 Intelligent Query Decomposition
 Breaks complex business questions into structured sub-queries using a Pydantic schema.
