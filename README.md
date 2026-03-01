@@ -1,15 +1,10 @@
-# 🚀 Monday.com Founder BI Agent
+#  Monday.com Founder BI Agent
 <img width="726" height="916" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/baebdf46-dff0-495b-b357-de0a4188824f" />
 
 
-> An AI-Powered Founder-Level Business Intelligence Agent  
-Built with **LangGraph + LangChain + OpenAI + Monday.com GraphQL API**
 
-Transform raw operational data into executive-ready insights using natural language.
 
----
-
-## 🧠 Overview
+##  Overview
 
 This system allows founders and executives to ask questions like:
 
